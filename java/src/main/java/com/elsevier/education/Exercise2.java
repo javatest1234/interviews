@@ -14,18 +14,23 @@ public class Exercise2 {
 		public Car() {
 		}
 		
+		//For gas engine's spinWheels() reference
 		public void moveForward() {
-			engine.spinWheels();
+			getEngine().spinWheels();
+		}
+		//For electric engine's spinWheels() reference
+		public void moveForward() {
+			 getEengine().spinWheels();
 		}
 		
 		//refer the method spinWheels() based on type of engine.
 		
-		public GasEngine getGengine() {
-			return gengine;
+		public GasEngine getEngine() {
+			return engine;
 		}
 
-		public void setGengine(GasEngine gengine) {
-			this.gengine = gengine;
+		public void setEngine(GasEngine gengine) {
+			this.engine = gengine;
 		}
 
 		public ElectricEngine getEengine() {
