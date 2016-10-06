@@ -4,6 +4,10 @@ package com.elsevier.education;
 
 TODO Is Counter thread-safe? If so, why, and if not, how can we fix it?
 
+Exercise4 is using a different Counter object in each thread so that's why it won't see any thread safety problems in this case.
+
+In case many iterations are there try using AtomicInteger
+
 */
 public class Exercise4 {
 
