@@ -32,12 +32,26 @@ public class Exercise3 {
 			id = newId;
 		}
 		
+		@Override
 		public int hashCode() {
 			return id * generator.nextInt();
 		}
 		
-		public boolean equals(Object other) {
-			return id.equals(((Person)other).id);
+		@Override
+		public boolean equals(Object other) {	
+			
+			if (this == other)
+			      return true;
+			if (other == null)
+			      return false;
+			if (getClass() != other.getClass())
+			      return false;
+			Person p = (Person) other;
+			  if (id != p.id)
+			      return false;
+			    return true;
+			
+			
 		}
 	}
 }
